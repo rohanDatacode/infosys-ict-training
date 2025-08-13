@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Results:</h2>
+<ul>
+    {% for option in options %}
+        <li>{{ option.option_text }}: {{ option.votes }} votes</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('index') }}">Go Back to Vote</a>
+{% endblock %}

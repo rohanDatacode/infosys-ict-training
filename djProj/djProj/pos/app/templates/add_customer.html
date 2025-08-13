@@ -1,0 +1,10 @@
+<h1>Add Customer</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Name" required><br>
+    <input type="text" name="mobile" placeholder="Mobile" required><br>
+    <input type="email" name="email" placeholder="Email"><br>
+    <textarea name="address" placeholder="Address"></textarea><br>
+    <button type="submit">Save Customer</button>
+</form>
+<a href="{% url 'home' %}">Back to Home</a>

@@ -1,0 +1,10 @@
+<h1>Add Product</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Product Name" required><br>
+    <input type="number" name="price" placeholder="Price" required><br>
+    <input type="number" name="quantity" placeholder="Quantity" required><br>
+    <input type="number" name="discount" placeholder="Discount %" step="0.01"><br>
+    <button type="submit">Save Product</button>
+</form>
+<a href="{% url 'home' %}">Back to Home</a>

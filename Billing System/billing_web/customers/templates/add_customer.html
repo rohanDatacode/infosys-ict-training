@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Customer</title>
+</head>
+<body>
+    <h1>Add Customer Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Placeholder form -->
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="text" name="mobile" placeholder="Mobile"><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <button type="submit">Add Customer</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{{ url_for('vote') }}" method="POST">
+    {% for option in options %}
+        <div>
+            <input type="radio" name="option" value="{{ option.id }}" required>
+            {{ option.option_text }}
+        </div>
+    {% endfor %}
+    <button type="submit">Submit Vote</button>
+</form>
+{% endblock %}

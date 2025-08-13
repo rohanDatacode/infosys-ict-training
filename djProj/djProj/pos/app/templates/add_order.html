@@ -1,0 +1,20 @@
+<h1>Add Order</h1>
+<form method="post">
+    {% csrf_token %}
+    <label>Customer:</label>
+    <select name="customer" required>
+        {% for c in customers %}
+            <option value="{{ c.id }}">{{ c.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label>Product:</label>
+    <select name="product" required>
+        {% for p in products %}
+            <option value="{{ p.id }}">{{ p.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <button type="submit">Save Order</button>
+</form>
+<a href="{% url 'home' %}">Back to Home</a>
